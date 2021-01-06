@@ -105,9 +105,9 @@ body {
 .arrow-down {
   display: inline;
   object-fit: contain;
-  transition: rotate 1s ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
-.up {
+.arrow-down.up {
   transform: rotate(180deg);
 }
 
