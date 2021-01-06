@@ -6,11 +6,11 @@ console.log(contentList);
 console.log(itemsList);
 
 //hide all paragraphs
-window.onload = () =>
-  contentList.forEach((paragraph) => {
-    paragraph.classList = "content-hidden";
-    console.log(paragraph.className);
-  });
+// window.onload = () =>
+//   contentList.forEach((paragraph) => {
+//     paragraph.classList = "content-hidden";
+//     console.log(paragraph.className);
+//   });
 
 //show only clicked items
 itemsList.forEach((item) => {
@@ -26,15 +26,16 @@ itemsList.forEach((item) => {
     hiddenItems.forEach((item) => {
       const hideContent = item.querySelector("p");
       const hideTitle = item.querySelector("h3");
-      const arrowUp = item.querySelector("img");
-      // arrowUp.classList = "arrow-up";
+    
       hideContent.classList = "content-hidden";
       hideTitle.classList = " ";
     });
 
     //toggle visibility only on the clicked items
-    itemContent.classList.toggle("content-hidden");
+    itemContent.classList.toggle("content-visible");
     itemTitle.classList.toggle("title-bold");
+    //disable :hover color, because it's already selected
+    itemTitle.classList.toggle("active")
     arrowUp.classList.toggle("up");
   });
 });

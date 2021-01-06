@@ -55,60 +55,10 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-self:flex-start;
+  align-self: flex-start;
   justify-self: center;
   position: relative;
   top: 20%;
-}
-.content h2 {
-  position: relative;
-  top: 10%;
-  font-size: calc(var(--fs-body) + 1rem);
-  color: var(--clr-f-dark);
-  padding: 10px;
-  margin: 0;
-}
-.content-items {
-  padding: 5px;
-  padding-right: 30%;
-  z-index: 1;
-}
-.content-items h3,
-.content-items p {
-  font-size: var(--fs-body);
-  font-weight: var(--fw-content);
-  color: var(--clr-f-light);
-}
-
-.content-items .title-bold {
-  font-weight: 700;
-  color: var(--clr-f-dark);
-  /* color: red;   */
-}
-.content-items .item {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-template-rows: 1fr max-content;
-  align-items: center;
-  column-gap: 1em;
-  transition: all 0.2s ease-in-out;
-}
-.item p {
-  grid-column: 1 / -1;
-  grid-row: 2 / -2;
-}
-
-.content-hidden {
-  display: none;
-}
-.arrow-down {
-  display: inline;
-  object-fit: contain;
-  transition: transform 250ms ease-in-out;
-}
-.arrow-down.up {
-  transform: rotate(180deg);
 }
 
 .content-items::after {
@@ -121,6 +71,71 @@ body {
   z-index: 10;
   background: var(--clr-divider);
   color: var(--clr-divider);
+}
+.content h2 {
+  position: relative;
+  top: 10%;
+  font-size: calc(var(--fs-body) + 1rem);
+  color: var(--clr-f-dark);
+  padding: 10px;
+  margin: 0;
+}
+
+.content-items {
+  padding: 5px;
+  padding-right: 30%;
+  z-index: 1;
+}
+.content-items h3,
+.content-items p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-content);
+  color: var(--clr-f-light);
+}
+.content-items h3 {
+  transition: color 0.1s ease-out;
+}
+.content-items:hover h3 {
+  color: var(--clr-f-hover);
+}
+.content-items:hover .active {
+  color: var(--clr-f-dark);
+}
+.content-items .title-bold {
+  font-weight: 700;
+  color: var(--clr-f-dark);
+  /* color: red;   */
+}
+.content-items .item {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 1fr max-content;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.content-hidden {
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: 0.2s ease-in-out; */
+}
+
+.content-visible {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.arrow-down {
+  display: inline;
+  object-fit: contain;
+  transition: transform 250ms ease-in-out;
+}
+.arrow-down.up {
+  transform: rotate(180deg);
 }
 
 /* =================================================================
