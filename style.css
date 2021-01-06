@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --ff-primary: "Kumbh Sans", sans-serif;
+  --fs-body: 12px;
+  --fw-title: 700;
+  --fw-content: 400;
+
+  --clr-f-dark: hsl(237, 12%, 33%);
+  --clr-f-hover: hsl(14, 88%, 65%);
+  --clr-f-light: hsl(240, 6%, 50%);
+  --clr-divider: hsl(240, 5%, 91%);
+  --clr-bg-first: hsl(273, 75%, 66%);
+  --clr-bg-second: hsl(240, 73%, 65%);
+}
