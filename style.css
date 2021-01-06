@@ -5,7 +5,7 @@
 }
 :root {
   --ff-primary: "Kumbh Sans", sans-serif;
-  --fs-body: calc(18px - 0.1vmin);
+  --fs-body: 12px;
   --fw-title: 700;
   --fw-content: 400;
 
@@ -50,33 +50,57 @@ body {
 .content {
   width: 50%;
   height: min-content;
+  font-family: var(--ff-primary);
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-self: center;
-  justify-self: flex-start;
-  font-family: var(--ff-primary);
+  align-self:flex-start;
+  justify-self: center;
+  position: relative;
+  top: 20%;
 }
 .content h2 {
+  position: relative;
+  top: 10%;
   font-size: calc(var(--fs-body) + 1rem);
   color: var(--clr-f-dark);
   padding: 10px;
   margin: 0;
 }
-.content-item {
+.content-items {
   padding: 5px;
   padding-right: 30%;
   z-index: 1;
 }
-.content-item h3,
-.content-item p {
+.content-items h3,
+.content-items p {
   font-size: var(--fs-body);
   font-weight: var(--fw-content);
   color: var(--clr-f-light);
 }
-.content-item .title {
-  display: flex;
-  justify-content: space-between;
+
+.content-items .title-bold {
+  font-weight: 700;
+  color: var(--clr-f-dark);
+  /* color: red;   */
+}
+.content-items .item {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 1fr max-content;
+  align-items: center;
+  column-gap: 1em;
+  transition: all 0.2s ease-in-out;
+}
+.item p {
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+}
+
+.content-hidden {
+  display: none;
 }
 .arrow-down {
   display: inline;
@@ -86,10 +110,8 @@ body {
 .up {
   transform: rotate(180deg);
 }
-.content p {
-  display: none;
-}
-.content-item::after {
+
+.content-items::after {
   /* divider */
   display: inline-block;
   content: "";
@@ -117,10 +139,10 @@ body {
   /* background: red; */
 }
 .logo-box {
-    position: absolute;
-    height: 200px;
-  left: -25%;
-  top: 40%;
+  position: absolute;
+  height: 200px;
+  left: -30%;
+  top: 45%;
   width: 50%;
   object-fit: contain;
   overflow: visible;
@@ -136,7 +158,7 @@ body {
   /* width: 70%; */
   position: relative;
   height: 100%;
-  left: -46%;
+  left: -36%;
   top: 0;
   overflow: hidden;
 }
