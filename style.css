@@ -5,14 +5,142 @@
 }
 :root {
   --ff-primary: "Kumbh Sans", sans-serif;
-  --fs-body: 12px;
+  --fs-body: calc(18px - 0.1vmin);
   --fw-title: 700;
   --fw-content: 400;
 
-  --clr-f-dark: hsl(237, 12%, 33%);
-  --clr-f-hover: hsl(14, 88%, 65%);
+  --clr-f-dark: hsl(238, 29%, 16%);
   --clr-f-light: hsl(240, 6%, 50%);
+  --clr-f-hover: hsl(14, 88%, 65%);
   --clr-divider: hsl(240, 5%, 91%);
   --clr-bg-first: hsl(273, 75%, 66%);
   --clr-bg-second: hsl(240, 73%, 65%);
+  --clr-card: #fff;
 }
+body {
+  display: grid;
+  position: relative;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(var(--clr-bg-first), var(--clr-bg-second));
+}
+/* =================================================================
+                                 LAYOUT
+================================================================ */
+.card {
+  width: 60vw;
+  min-width: 850px;
+  height: 55vh;
+  min-height: 550px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background: var(--clr-card);
+  margin: 0 auto;
+  border-radius: 25px;
+  /* overflow: hidden; */
+  z-index: 50;
+}
+
+/* =================================================================
+                                 STYLE CONTENT
+================================================================ */
+.content {
+  width: 50%;
+  height: min-content;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-self: center;
+  justify-self: flex-start;
+  font-family: var(--ff-primary);
+}
+.content h2 {
+  font-size: calc(var(--fs-body) + 1rem);
+  color: var(--clr-f-dark);
+  padding: 10px;
+  margin: 0;
+}
+.content-item {
+  padding: 5px;
+  padding-right: 30%;
+  z-index: 1;
+}
+.content-item h3,
+.content-item p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-content);
+  color: var(--clr-f-light);
+}
+.content-item .title {
+  display: flex;
+  justify-content: space-between;
+}
+.arrow-down {
+  display: inline;
+  object-fit: contain;
+  transition: rotate 1s ease-in-out;
+}
+.up {
+  transform: rotate(180deg);
+}
+.content p {
+  display: none;
+}
+.content-item::after {
+  /* divider */
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  z-index: 10;
+  background: var(--clr-divider);
+  color: var(--clr-divider);
+}
+
+/* =================================================================
+                                 STYLE LOGO
+================================================================ */
+.logo {
+  display: flex;
+  width: 50%;
+  position: relative;
+  /* overflow: visible; */
+}
+.overflow {
+  position: static;
+  overflow: hidden;
+  width: 100%;
+  /* background: red; */
+}
+.logo-box {
+    position: absolute;
+    height: 200px;
+  left: -25%;
+  top: 40%;
+  width: 50%;
+  object-fit: contain;
+  overflow: visible;
+  z-index: 10;
+}
+.logo-front {
+  width: 100%;
+  position: relative;
+  left: -20%;
+  top: -85%;
+}
+.logo-back {
+  /* width: 70%; */
+  position: relative;
+  height: 100%;
+  left: -46%;
+  top: 0;
+  overflow: hidden;
+}
+
+/* =================================================================
+                                 MEDIA QUERIES
+================================================================ */
