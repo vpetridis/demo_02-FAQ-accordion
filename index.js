@@ -34,5 +34,6 @@ itemsList.forEach((item) => {
     itemTitle.classList.toggle("active");
     arrowUp.classList.toggle("up");
     box.classList.toggle("active-box");
+
   });
 });

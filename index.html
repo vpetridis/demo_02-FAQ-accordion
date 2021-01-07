@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -15,8 +17,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <title>Frontend Mentor | FAQ Accordion Card</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,14 +37,22 @@
   </head>
   <body>
     <div class="mobile-images">
-      <img class="logo-mobile" src="images/illustration-woman-online-mobile.svg" alt="illustration of a woman in front of a big screen">
-      <img class="logo-bg-mobile" src="images/bg-pattern-mobile.svg" alt="background pattern">
+      <img
+        class="logo-mobile"
+        src="images/illustration-woman-online-mobile.svg"
+        alt="illustration of a woman in front of a big screen"
+      />
+      <img
+        class="logo-bg-mobile"
+        src="images/bg-pattern-mobile.svg"
+        alt="background pattern"
+      />
     </div>
     <main class="card">
       <div class="logo">
         <div class="overflow">
           <img
-            class="logo-box"
+            class="logo-box animate__animated animate__pulse animate__slow  animate__infinite"
             src="images/illustration-box-desktop.svg"
             alt=""
           />
