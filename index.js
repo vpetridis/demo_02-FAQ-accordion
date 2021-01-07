@@ -1,6 +1,7 @@
 const itemsList = document.querySelectorAll(".item");
 const contentList = document.querySelectorAll(".item p");
 const titleList = document.querySelectorAll(".item h3");
+const box = document.querySelector(".logo-box");
 
 console.log(contentList);
 console.log(itemsList);
@@ -26,7 +27,9 @@ itemsList.forEach((item) => {
     hiddenItems.forEach((item) => {
       const hideContent = item.querySelector("p");
       const hideTitle = item.querySelector("h3");
-    
+      const arrowUp = item.querySelector("img")
+
+      arrowUp.classList = "arrow-down"
       hideContent.classList = "content-hidden";
       hideTitle.classList = " ";
     });
@@ -35,7 +38,8 @@ itemsList.forEach((item) => {
     itemContent.classList.toggle("content-visible");
     itemTitle.classList.toggle("title-bold");
     //disable :hover color, because it's already selected
-    itemTitle.classList.toggle("active")
+    itemTitle.classList.toggle("active");
     arrowUp.classList.toggle("up");
+    box.classList.toggle("active-box");
   });
 });
