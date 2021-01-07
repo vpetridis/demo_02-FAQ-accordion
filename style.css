@@ -209,10 +209,10 @@ body {
   .card {
     width: 85vw;
     min-width: unset;
-    height: 75vh;
+    height: 80vh;
     min-height: unset;
     position: relative;
-    top: -20%;
+    top: -10%;
     justify-self: center;
     align-self: center;
     display: flex;
@@ -290,7 +290,7 @@ body {
     height: 100%;
     display: unset;
     position: relative;
-    left: 5;
+    /* left: 5; */
     right: 5%;
     z-index: 100;
     object-fit: contain;
@@ -298,14 +298,15 @@ body {
   }
   
   .logo-bg-mobile {
-    /* width: 100%;
-    height: 100%; */
+    /* width: 100%; */
+    /* height: 100%; */
     display: unset;
     position: relative;
     object-fit: contain;
     /* top: -40%; */
-    bottom: 67%;
-    left: 15%;
+    bottom: 57%;
+    /* left: 15; */
+    right: -25%;
     overflow: visible;
     z-index: 10;
   }
