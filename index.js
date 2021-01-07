@@ -6,14 +6,7 @@ const box = document.querySelector(".logo-box");
 console.log(contentList);
 console.log(itemsList);
 
-//hide all paragraphs
-// window.onload = () =>
-//   contentList.forEach((paragraph) => {
-//     paragraph.classList = "content-hidden";
-//     console.log(paragraph.className);
-//   });
 
-//show only clicked items
 itemsList.forEach((item) => {
   item.addEventListener("click", () => {
     //find the exact next paragraph & title
