@@ -77,7 +77,7 @@ body {
   top: 10%;
   font-size: calc(var(--fs-body) + 1rem);
   color: var(--clr-f-dark);
-  padding: 10px;
+  padding: 5  px;
   margin: 0;
 }
 
